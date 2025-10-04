@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>战队淘汰赛抽签系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>战队淘汰赛抽签系统</h1>
+            <p class="subtitle">输入战队名称，然后逐一进行抽签分配赛程</p>
+        </header>
+        
+        <div class="input-section">
+            <h2 class="section-title">战队信息</h2>
+            <div class="team-inputs">
+                <div class="input-group">
+                    <label class="team-label">战队 1:</label>
+                    <input type="text" class="team-input" id="team1" placeholder="输入战队名称">
+                </div>
+                <div class="input-group">
+                    <label class="team-label">战队 2:</label>
+                    <input type="text" class="team-input" id="team2" placeholder="输入战队名称">
+                </div>
+                <div class="input-group">
+                    <label class="team-label">战队 3:</label>
+                    <input type="text" class="team-input" id="team3" placeholder="输入战队名称">
+                </div>
+                <div class="input-group">
+                    <label class="team-label">战队 4:</label>
+                    <input type="text" class="team-input" id="team4" placeholder="输入战队名称">
+                </div>
+            </div>
+            <button class="draw-button" id="drawBtn">开始抽签</button>
+        </div>
+        
+        <div class="bracket-section">
+            <h2 class="section-title">淘汰赛赛程</h2>
+            
+            <div class="tournament-bracket">
+                <!-- 左侧战队 -->
+                <div class="bracket-side">
+                    <div class="bracket-team" id="left-team1"></div>
+                    <div class="bracket-team" id="left-team2"></div>
+                </div>
+                
+                <!-- 连线容器 -->
+                <div class="connector-container">
+                    <!-- 左侧连线 -->
+                    <div class="connector horizontal left-top"></div>
+                    <div class="connector horizontal left-bottom"></div>
+                    <div class="connector vertical left-v"></div>
+                    <div class="connector horizontal left-to-final"></div>
+                    
+                    <!-- 右侧连线 -->
+                    <div class="connector horizontal right-top"></div>
+                    <div class="connector horizontal right-bottom"></div>
+                    <div class="connector vertical right-v"></div>
+                    <div class="connector horizontal right-to-final"></div>
+                </div>
+                
+                <!-- 中间决赛区 -->
+                <div class="bracket-center">
+                    <div class="final-title">决赛</div>
+                    <div class="final-match">
+                        <div class="final-team" id="final-team1">待定</div>
+                        <div class="final-team" id="final-team2">待定</div>
+                    </div>
+                </div>
+                
+                <!-- 右侧战队 -->
+                <div class="bracket-side">
+                    <div class="bracket-team" id="right-team1"></div>
+                    <div class="bracket-team" id="right-team2"></div>
+                </div>
+            </div>
+            
+            <div class="status" id="status">等待抽签开始...</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
