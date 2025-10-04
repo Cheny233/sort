@@ -176,7 +176,7 @@ h1 {
     background: #2980b9;
     border-color: #2471a3;
     box-shadow: 0 0 10px rgba(41, 128, 185, 0.5);
-    animation: fadeIn 0.5s;
+    animation: fadeIn 2s;
 }
 
 @keyframes fadeIn {
@@ -522,4 +522,5 @@ h1 {
     .draw-button {
         padding: 0.7rem 1.2rem;
     }
+
 }
