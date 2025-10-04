@@ -74,13 +74,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if (drawCount === 0) {
             leftTeams[0].textContent = selectedTeam;
             leftTeams[0].classList.add('filled');
-        } else if (drawCount === 1) {
+        }
+        else if (drawCount === 1) {
             rightTeams[0].textContent = selectedTeam;
             rightTeams[0].classList.add('filled');
-        } else if (drawCount === 2) {
+        }
+        else if (drawCount === 2) {
             leftTeams[1].textContent = selectedTeam;
             leftTeams[1].classList.add('filled');
-        } else if (drawCount === 3) {
+        }
+        else if (drawCount === 3) {
             rightTeams[1].textContent = selectedTeam;
             rightTeams[1].classList.add('filled');
         }
@@ -90,7 +93,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (remainingTeams.length > 0) {
             status.textContent = `已分配 ${selectedTeam}，点击继续抽签`;
             drawBtn.textContent = '继续抽签';
-        } else {
+        }
+        else {
             status.textContent = `已分配 ${selectedTeam}，所有战队分配完毕！`;
             status.classList.add('highlight');
             drawBtn.textContent = '重新开始';
@@ -100,7 +104,8 @@ document.addEventListener('DOMContentLoaded', function() {
     drawBtn.addEventListener('click', function() {
         if (drawBtn.textContent === '重新开始') {
             initialize();
-        } else {
+        }
+        else {
             if (drawCount === 0) {
                 initialize();
             }
@@ -109,4 +114,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     initialize();
+
 });
